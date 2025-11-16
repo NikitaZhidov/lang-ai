@@ -1,9 +1,10 @@
+import { getData } from './api/hello/route';
 import styles from './page.module.scss';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Index() {
-  const url = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
-  const data = await fetch(`${url}/api`);
-  const json = await data.json();
+  const data = await getData();
 
   /*
    * Replace the elements below with your own.
@@ -12,7 +13,7 @@ export default async function Index() {
    */
   return (
     <div className={styles.page}>
-      <h1>{json.message}</h1>
+      <h1>{data.message}</h1>
     </div>
   );
 }
