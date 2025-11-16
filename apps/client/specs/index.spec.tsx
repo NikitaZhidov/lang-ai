@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
-import { getData } from '../src/app/api/hello/route';
+import { getData } from '../src/api/get-data';
 
-jest.mock('../src/app/api/hello/route');
+jest.mock('../src/api/get-data');
 
 describe('Page', () => {
   it('should render successfully', async () => {
