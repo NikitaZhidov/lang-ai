@@ -8,7 +8,7 @@ export default async function Index() {
 
   try{
     data = await getData();
-  } catch (error) {
+  } catch {
     data = { message: '' };
   }
 
